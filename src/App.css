@@ -2,37 +2,336 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a:hover {
+  color: black;
+  text-decoration-color:  rgb(0, 162, 255);;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 5vh;
+  color: black;
+}
+li {
+  float: left;
+  display: block;
+  padding: 20px;
+  color: black;
+  font-family: monospace;
+  font-size: 30px;
+}
+
+.selected {
+  text-decoration: underline;
+  text-decoration-color: rgb(0, 162, 255);
+}
+
+.title {
+  font-size: 50px;
+  font-family: monospace;
+  font-weight: bold;
+  justify-content: right;
+}
+
+.container {
+  height:100vh;
+  min-width: 100%;
+}
+
+.aboutRow {
+  height: 65vh;
+  background-color: rgb(245,245,245);
+}
+.aboutImageCol {
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+}
+
+.aboutImage {
+  height:50vh;
+  width: 40vh;
+  background-color: grey;
+}
+
+.aboutText {
+  justify-content: left;
+  align-items: left;
+  text-align: left;
+  padding:5vh;
+  margin-right: 30px;
+}
+
+.bottomBar {
+  background-color: black;
+  height: 20vh;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  display: flex;
+}
+
+.subInput {
+  height: 2rem;
+  width: 15rem;
+  text-align: center;
+}
+
+.subButton {
+  background-color: rgba(211, 211, 211, 0.924);
+  margin-top: 2vh;
   color: white;
+  height: 2rem;
+  width: 9rem;
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
+.modalStyle {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FFF;
+  padding: 50px;
+  height: 15rem;
+  width: 30rem;
+  display: block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(0,0,0,.7);
 }
+
+.modalOkay {
+  background-color: rgba(211, 211, 211, 0.924);
+  margin-top: 2vh;
+  color: black;
+  font-weight: bold;
+  height: 2rem;
+  width: 9rem;
+  border: none;
+}
+
+.modalExit {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.modalExit:hover {
+  cursor: pointer;
+}
+
+.topBarRow {
+  position: relative;
+  height: 5vh;
+}
+.topBarCol {
+  position: absolute;
+  display: flex;
+  right: 50px;
+  margin-top: 1vh;
+  margin-bottom: 0px;
+
+}
+
+.topIcon {
+  margin-right: 30px;
+}
+
+.socialCol {
+  height: 14vh;
+  margin-top: 10px;
+  position: relative;
+}
+.socialText {
+  color: white;
+  position: absolute;
+}
+
+.socialIcons {
+  position: absolute;
+  top: 50px;
+}
+
+.specificSocial {
+  margin-right: 10px;
+}
+
+.specificSocial:hover {
+  cursor: pointer;
+}
+
+.botNav {
+  float: right;
+}
+.botNavLink {
+  color: white;
+  font-size: large;
+  clear: left;
+}
+
+.botSelected {
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+
+.botNavLink:hover {
+  color: white;
+  text-decoration-color:  white;
+}
+
+.botNavList {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+}
+
+.botNavItem {
+  float: left;
+  clear: left;
+  padding: 0px;
+  height: 25px;
+  display: block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+label {
+  font-weight: 700;
+  display: block;
+  text-align: center;
+}
+.formField {
+  width: 320px;
+  margin-bottom: 20px;
+}
+
+.formMessage {
+  width: 320px;
+  height: 15vh;
+  margin-bottom: 20px;
+}
+
+.formSubmit {
+  display: block;
+  background-color: black;
+  color: rgb(0, 119, 255);
+  width: 125px;
+  margin-left: auto;
+  margin-right:auto;
+}
+.contactRow {
+  height: 85vh;
+  background-color: rgb(245,245,245);
+  justify-content: center;
+}
+
+.contactHeader {
+  display: block;
+  margin-top: 25px;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.contactForm {
+  align-items: center;
+  justify-content: center;
+}
+
+.contactCol {
+  align-items: center;
+  justify-content: center;
+}
+
+.loginRow {
+  height: 70vh;
+  background-color: rgb(245,245,245);
+  justify-content: left;
+}
+
+.loginCol {
+  align-items: center;
+  justify-content: center;
+}
+
+.loginForm {
+  margin-top: 10vh;
+}
+
+.loginField {
+  width: 320px;
+  display: block;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.loginLabel {
+  font-weight: 700;
+  text-align: center;
+  min-width: 100px;
+}
+
+.loginButton {
+  display: block;
+  background-color: black;
+  color: rgb(0, 119, 255);
+  width: 150px;
+  height: 50px;
+  margin-left: auto;
+  margin-right:auto;
+  margin-top: 20px;
+}
+
+.pwButton {
+  display: block;
+  background-color: black;
+  color: white;
+  width: 150px;
+  margin-left: auto;
+  margin-right:auto;
+  margin-top: 2vh;
+}
+
+.loginSideCol {
+  align-items: center;
+  justify-content: center;
+}
+
+.loginNav {
+  float: right;
+}
+
+.loginNavList {
+  margin-top: 100px;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginNavItem{
+  float: left;
+  clear: left;
+  padding: 0px;
+  height: 25px;
+  display: block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.loginNavLink {
+  font-size: x-large;
+  clear: left;
+}
+
